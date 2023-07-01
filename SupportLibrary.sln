@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupportLibraryLogic", "SupportLibraryLogic\SupportLibraryLogic.csproj", "{024404DF-DEC0-4D39-9CAB-84E2C81C9F41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SupportLibraryTest", "SupportLibraryTest\SupportLibraryTest.csproj", "{2708A6E9-5DD1-496F-825B-A0511CD8CB86}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{F309E20D-574E-4743-B0A5-B419565681AD}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\01 SupportLibrary.reg = Resources\01 SupportLibrary.reg
+		Resources\02 tbl_SupportLibrary_Data.sql = Resources\02 tbl_SupportLibrary_Data.sql
+		Resources\03 tbl_SupportLibrary_Log.sql = Resources\03 tbl_SupportLibrary_Log.sql
+		Resources\04 sp_SupportLibrary_GetData.sql = Resources\04 sp_SupportLibrary_GetData.sql
+		Resources\05 sp_SupportLibrary_LogStore.sql = Resources\05 sp_SupportLibrary_LogStore.sql
+		Resources\06 sp_SupportLibrary_GetLogs.sql = Resources\06 sp_SupportLibrary_GetLogs.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sandcastle", "Sandcastle", "{A53494B4-FA17-4DF4-AE3A-0EA026B2A156}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\Sandcastle\SupportLibrary.shfbproj = Resources\Sandcastle\SupportLibrary.shfbproj
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "icons", "icons", "{58C9073D-075E-4EB3-B661-04F547B1840F}"
+	ProjectSection(SolutionItems) = preProject
+		Resources\Sandcastle\icons\tagline.png = Resources\Sandcastle\icons\tagline.png
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{AD20ED98-9E6F-44F3-B928-D75824490A31}"
+	ProjectSection(SolutionItems) = preProject
+		Documentation\Quick Reference v1.0.0.12.docx = Documentation\Quick Reference v1.0.0.12.docx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{024404DF-DEC0-4D39-9CAB-84E2C81C9F41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024404DF-DEC0-4D39-9CAB-84E2C81C9F41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024404DF-DEC0-4D39-9CAB-84E2C81C9F41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024404DF-DEC0-4D39-9CAB-84E2C81C9F41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2708A6E9-5DD1-496F-825B-A0511CD8CB86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2708A6E9-5DD1-496F-825B-A0511CD8CB86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2708A6E9-5DD1-496F-825B-A0511CD8CB86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2708A6E9-5DD1-496F-825B-A0511CD8CB86}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A53494B4-FA17-4DF4-AE3A-0EA026B2A156} = {F309E20D-574E-4743-B0A5-B419565681AD}
+		{58C9073D-075E-4EB3-B661-04F547B1840F} = {A53494B4-FA17-4DF4-AE3A-0EA026B2A156}
+		{AD20ED98-9E6F-44F3-B928-D75824490A31} = {F309E20D-574E-4743-B0A5-B419565681AD}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DDAF872-707F-4410-BCCA-83FCD5A30C46}
+	EndGlobalSection
+EndGlobal

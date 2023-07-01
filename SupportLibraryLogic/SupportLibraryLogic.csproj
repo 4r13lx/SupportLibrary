@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{024404DF-DEC0-4D39-9CAB-84E2C81C9F41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SupportLibrary</RootNamespace>
+    <AssemblyName>SupportLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SupportLibrary.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\SupportLibrary.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>MSC Argentina 2016.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveDirectory\ActiveDirectoryHelper.cs" />
+    <Compile Include="ActiveDirectory\DirectoryEntryHelper.cs" />
+    <Compile Include="ActiveDirectory\Enumerations.cs" />
+    <Compile Include="ActiveDirectory\Extensions.cs" />
+    <Compile Include="ActiveDirectory\IActiveDirectoryHelper.cs" />
+    <Compile Include="Collections\ArrayEx.cs" />
+    <Compile Include="Collections\Extensions.cs" />
+    <Compile Include="Core\Cast.cs" />
+    <Compile Include="Core\CloneExtensions.cs" />
+    <Compile Include="Core\DateTimeEx.cs" />
+    <Compile Include="Core\DateTimeExtensions.cs" />
+    <Compile Include="Core\EnumerationExtensions.cs" />
+    <Compile Include="Core\Interfaces\ICloneableExtended.cs" />
+    <Compile Include="Core\SerializerExtensions.cs" />
+    <Compile Include="Core\Enumerations.cs" />
+    <Compile Include="Core\CastExtensions.cs" />
+    <Compile Include="Core\SerializationFormats\XmlSerializer.cs" />
+    <Compile Include="Core\SerializationFormats\XmlDataContractSerializer.cs" />
+    <Compile Include="Core\SerializationFormats\BinaryFormatterSerializer.cs" />
+    <Compile Include="Core\SerializationFormats\SerializationFormats.cs" />
+    <Compile Include="Core\Serializer.cs" />
+    <Compile Include="Data\Extensions.cs" />
+    <Compile Include="Data\DataHelper.cs" />
+    <Compile Include="Data\ISqlHelper.cs" />
+    <Compile Include="Data\SqlHelper.cs" />
+    <Compile Include="Data\SqlHelperLogParams.cs" />
+    <Compile Include="Email\EmailHelper.cs" />
+    <Compile Include="IO\Enumerations.cs" />
+    <Compile Include="IO\FileHelper.cs" />
+    <Compile Include="IO\IFileHelper.cs" />
+    <Compile Include="Logging\Enumerations.cs" />
+    <Compile Include="Logging\EventLogHelper.cs" />
+    <Compile Include="Logging\Extensions.cs" />
+    <Compile Include="Logging\IEventLogHelper.cs" />
+    <Compile Include="Logging\ITextLogHelper.cs" />
+    <Compile Include="Logging\LogEntry\LogEntryCustom.cs" />
+    <Compile Include="Logging\LogEntry\ILogEntryProvider.cs" />
+    <Compile Include="Logging\LogEntry\LogEntryMinimal.cs" />
+    <Compile Include="Logging\LogEntry\LogEntryStandard.cs" />
+    <Compile Include="Logging\LogHelper.cs" />
+    <Compile Include="Logging\TextLogHelper.cs" />
+    <Compile Include="Logging\TraceListeners\CustomConsoleTraceListener.cs" />
+    <Compile Include="Logging\TraceListeners\CustomEventLogTraceListener.cs" />
+    <Compile Include="Logging\TraceListeners\CustomTraceListener.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\Enumerations.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\PasswordValidator.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\Validations\IValidation.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\Validations\ValidationBase.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\ValidationResult.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\Validations.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\Validations\ValidationMaxDecrementalChars.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\Validations\ValidationMaxIncrementalChars.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\Validations\ValidationMaxLenght.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\Validations\ValidationMaxConsecutiveChars.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\Validations\ValidationMinSpecialChars.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\Validations\ValidationMinNumericChars.cs" />
+    <Compile Include="RegularExpressions\PasswordValidator\Validations\ValidationMinLenght.cs" />
+    <Compile Include="Security\Cryptography.cs" />
+    <Compile Include="Testing\AssertEx.Collections.cs" />
+    <Compile Include="Testing\AssertEx.Text.cs" />
+    <Compile Include="Testing\AssertEx.Condition.cs" />
+    <Compile Include="Testing\AssertEx.Exceptions.cs" />
+    <Compile Include="Testing\DataRowComparition\CustomDataRowComparer.cs" />
+    <Compile Include="Testing\DataRowComparition\DataRowComparerWrapper.cs" />
+    <Compile Include="Testing\DataRowComparition\ICustomDataRowComparer.cs" />
+    <Compile Include="Web\Extensions.cs" />
+    <Compile Include="Web\FileDownloader.cs" />
+    <Compile Include="Web\ISessionHelper.cs" />
+    <Compile Include="Web\SessionHelper.cs" />
+    <Compile Include="WindowsRegistry\Exceptions.cs" />
+    <Compile Include="WindowsRegistry\IRegistryHelper.cs" />
+    <Compile Include="Testing\Exceptions.cs" />
+    <Compile Include="WindowsRegistry\RegistryHelperParams.cs" />
+    <Compile Include="WindowsRegistry\Enumerations.cs" />
+    <Compile Include="Math\MathEx.cs" />
+    <Compile Include="Core\Debug.cs" />
+    <Compile Include="RegularExpressions\Enumerations.cs" />
+    <Compile Include="RegularExpressions\RegexHelper.cs" />
+    <Compile Include="RegularExpressions\RegexHelper.Business.cs" />
+    <Compile Include="RegularExpressions\RegexHelper.Miscellaneous.cs" />
+    <Compile Include="WindowsRegistry\RegistryHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Testing\Enumerations.cs" />
+    <Compile Include="Testing\AssertEx.Data.cs" />
+    <Compile Include="Text\Extensions.cs" />
+    <Compile Include="Testing\AssertEx.cs" />
+    <Compile Include="Web\Enumerations.cs" />
+    <Compile Include="Web\TemplateHtmlBuilder.cs" />
+    <Compile Include="Web\CodeHtmlBuilder.cs" />
+    <Compile Include="Web\IHtmlBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
